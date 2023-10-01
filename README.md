@@ -1,4 +1,3 @@
-
 <div align="center">
  <img  src="https://github.com/AleksandarSarbajic/the-wild-oasis/blob/main/public/logo-dark.png"/>
  </div>
