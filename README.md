@@ -15,7 +15,7 @@
 </div>  
 
 
-<p align="center">The Fast React Pizza is an app, that that has a variety of different pizzas so everyone can find his favorite pizza to order</p>
+<p align="center">The Wild Oasis app enables you to check in/out bookings and gain a complete understanding of bookings, sales, check-ins, occupancy rates.</p>
 
 <div align="center">
   
