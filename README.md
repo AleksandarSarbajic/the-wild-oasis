@@ -70,7 +70,7 @@ $ npm run start
 
 - [Tasty Trail](https://github.com/AleksandarSarbajic/the-wild-oasis) - Food ordering app
 - [The Wild Oasis](https://github.com/AleksandarSarbajic/Tasty-Trail) - Hotel service app
-- [React Quiz](https://github.com/AleksandarSarbajic/react-quiz) - React quiz app
+- [World Wise](https://github.com/AleksandarSarbajic/WorldWise) - Countries visited tracking app
 
 ## License
 
