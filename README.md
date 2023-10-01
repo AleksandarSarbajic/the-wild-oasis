@@ -9,8 +9,10 @@
 <img src="https://img.shields.io/npm/v/npm.svg?logo=npm"/>
 <img src="https://img.shields.io/badge/react-v18.2.0-blue?logo=react"/>
 <img src="https://img.shields.io/badge/reactrouterdom-v6.14.2-red?logo=reactrouter"/>
-<img src="https://img.shields.io/badge/tailwindcss-v3.3.3-blue?logo=tailwindcss"/>
-<img src="https://img.shields.io/badge/reduxtoolkit-v1.9.5-purple?logo=redux"/>
+<img src="https://img.shields.io/badge/styledcomponents-v6.0.7-pink?logo=styledcomponents"/>
+<img src="https://img.shields.io/badge/reactquery-v4.32.6-red?logo=reactquery"/>
+<img src="https://img.shields.io/badge/reacthookform-v7.45.4-red?logo=reacthookform"/>
+<img src="https://img.shields.io/badge/supabase-v2.31.0-green?logo=supabase"/>
 </div>  
 
 
@@ -20,19 +22,23 @@
   
 <a href="#quicstart" >Quickstart</a> • <a href="#technologies-used" align="center">Technologies Used</a> •  <a href="#screenshot" align="center"> Screenshot </a> • <a href="#you-may-also-like" align="center"> You may also like  </a> •  <a href="#license" align="center"> License  </a> 
 
-•<a href="https://forkify-app-aleksandar.netlify.app/" align="Center">Live Server</a>
-
-
+•<a href="https://the-wild-oasis-aleksandar.netlify.app/" align="Center">Live Server</a>
 
 </div>
 
 ## Technologies Used
 
-  - [JavaScript](https://www.javascript.com/)
+  - [React](https://react.dev/)
+  - [React Router Dom](https://reactrouter.com/en/main)
+  - [Styled componenets](https://styled-components.com/)
+  - [React Query](https://tanstack.com/query/v3/)
+  - [React Hook Form](https://www.react-hook-form.com/)
+  - [Supabase](https://supabase.com/)
+
 
 ## Screenshot
 
-![Screenshot 2023-09-30 165057](https://github.com/AleksandarSarbajic/react-quiz/assets/114814838/1ee5c5a4-14a4-4630-b0ae-ae3597da1896)
+![Screenshot 2023-09-30 164953](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/528ab328-dc51-4f0a-baad-f825b6f3b7c7)
 
 ## Quicstart
 
@@ -40,10 +46,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com/) and [
 
 ```
 # Clone this repository 
-$ git clone https://github.com/AleksandarSarbajic/forkify
+$ git clone https://github.com/AleksandarSarbajic/the-wild-oasis
 
 # Go into the repository
-$ cd forkify
+$ cd the-wild-oasis
 
 # Install dependencies
 $ npm install
