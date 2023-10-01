@@ -69,7 +69,7 @@ $ npm run start
 ## You may also like...
 
 - [Tasty Trail](https://github.com/AleksandarSarbajic/the-wild-oasis) - Food ordering app
-- [The Wild Oasis](https://github.com/AleksandarSarbajic/Tasty-Trail) - Hotel service app
+- [Fast React Pizza](https://github.com/AleksandarSarbajic/fast-react-pizza) - Pizza ordering app
 - [World Wise](https://github.com/AleksandarSarbajic/WorldWise) - Countries visited tracking app
 
 ## License
