@@ -37,7 +37,14 @@
 
 ## Screenshot
 
-![Screenshot 2023-09-30 164953](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/528ab328-dc51-4f0a-baad-f825b6f3b7c7)
+![dashboard](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/ac4271e4-6d28-4d7a-bdb6-7bbe47b3367d)
+
+
+
+
+
+
+
 
 ## Quicstart
 
