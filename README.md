@@ -78,9 +78,15 @@ On Dashboard you can see the number of bookings, sales, number of check ins and 
 
 ### Bookings Page
 
-On bookings page you can see all bookings that are checked out, checked in and unconfirmed. For the bookings you can sort them by date and the amount. For every booking you see the details, delete them or check in or check out if needed.
+On bookings page you can see all bookings that are checked out, checked in and unconfirmed. For the bookings you can sort them by date and the amount. For every booking you can see the details, delete them or check in or check out if needed.
 
 ![Screenshot 2023-10-02 121822](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/5238b22f-402d-4d4a-8023-42508933bae0)
+
+When we open a single booking we can can see for how long will they stay, in which cabin are they staying ,name of the person that booked a nights, how many guests, email, national id, total price and if its paid or not.
+
+We can add an breakfast for that booking if they want, confirm if the guest has paid the amount needed and afterwards we can check in or check out a booking or delete it.
+
+
 
 
 ![checkingBooking](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/f47d124f-a0b3-450e-b557-5867fa5d8e2e)
