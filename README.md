@@ -70,6 +70,28 @@ $ npm run start
 
 ## How It Works
 
+### Dashboard page
+
+On Dashboard you can see the number of bookings, sales, number of check ins and occupancy rate for last 7, 30, 90 days. Today guests that that arriving or departing and from the dashboard, you can check in or check out guests. Stay Duration duration summary and sales chart for chosen number of days.
+
+![Screenshot 2023-09-30 164953](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/a83c7c15-6d3b-48a1-8a6b-f669f492ab6f)
+
+### Bookings Page
+
+On bookings page you can see all bookings that are checked out, checked in and unconfirmed. For the bookings you can sort them by date and the amount. For every booking you see the details, delete them or check in or check out if needed.
+
+![Screenshot 2023-10-02 121822](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/5238b22f-402d-4d4a-8023-42508933bae0)
+
+
+![checkingBooking](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/f47d124f-a0b3-450e-b557-5867fa5d8e2e)
+
+
+-  The Wild Oasis supports light and dark mode!
+
+ 
+![mode](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/d4ac3936-edf7-4fe4-b82e-98102f3f5352)
+
+
 
 
 ## You may also like...
