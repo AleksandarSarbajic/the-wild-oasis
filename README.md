@@ -86,14 +86,27 @@ When we open a single booking we can can see for how long will they stay, in whi
 
 We can add an breakfast for that booking if they want, confirm if the guest has paid the amount needed and afterwards we can check in or check out a booking or delete it.
 
-
-
-
 ![checkingBooking](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/f47d124f-a0b3-450e-b557-5867fa5d8e2e)
 
+### Create a new user page
 
--  The Wild Oasis supports light and dark mode!
+You can create new accounts for others colleagues. 
 
+![Screenshot 2023-10-02 220009](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/74658280-d4b7-4bdc-b479-6558df497955)
+
+### Settings page
+
+You can adjust settings for minimum and maximum nights/bookings, maximum guest/booking and breakfast % price
+
+![Screenshot 2023-10-02 220025](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/9539e49d-6418-4736-a4e6-83da3afce218)
+
+### Account page
+
+On account page you can change your password, email address, full name and change avatar image.
+
+![Screenshot 2023-10-02 220122](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/251dc81b-d9b4-4a65-9684-04d314f03e64)
+
+The Wild Oasis also supports light and dark mode!
  
 ![mode](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/d4ac3936-edf7-4fe4-b82e-98102f3f5352)
 
