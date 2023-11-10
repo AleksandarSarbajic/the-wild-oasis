@@ -4,6 +4,7 @@ import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
 
 import useOutsideClick from "../hooks/useOutsideClick";
+import Uploader from "../data/Uploader";
 
 const StyledModal = styled.div`
   position: fixed;
