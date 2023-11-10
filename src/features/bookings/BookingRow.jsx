@@ -16,7 +16,7 @@ import ConfirmDelete from "../../ui/ConfirmDelete";
 
 import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
-import { useCheckout } from "../check-in-out/useCheckout";
+import { useCheckout } from "../check-in-out/UseCheckout";
 import { useDeleteBooking } from "./useDeleteBooking";
 
 const Cabin = styled.div`
