@@ -6,19 +6,15 @@ import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
+import Spinner from "../../ui/Spinner";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { useBooking } from "../bookings/useBooking";
-import Spinner from "../../ui/Spinner";
 import { useEffect, useState } from "react";
 import Checkbox from "../../ui/Checkbox";
 import { formatCurrency } from "../../utils/helpers";
 import { useCheckin } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
-import Modal from "../../ui/Modal";
-import ConfirmDelete from "../../ui/ConfirmDelete";
-import { useDeleteBooking } from "../bookings/useDeleteBooking";
-import { useNavigate } from "react-router-dom";
 
 const Box = styled.div`
   /* Box */
@@ -29,19 +25,16 @@ const Box = styled.div`
 `;
 
 function CheckinBooking() {
-  const { deleteBooking, isDeletingBooking } = useDeleteBooking();
-  const navigate = useNavigate();
   const [confirmPaid, setConfirmPaid] = useState(false);
-  const [addBreakFast, setAddBreakFast] = useState(false);
+  const [addBreakfast, setAddBreakfast] = useState(false);
   const { booking, isLoading } = useBooking();
   const { settings, isLoading: isLoadingSettings } = useSettings();
 
-  useEffect(() => {
-    setConfirmPaid(booking?.isPaid ?? false);
-  }, [booking]);
+  useEffect(() => setConfirmPaid(booking?.isPaid ?? false), [booking]);
 
   const moveBack = useMoveBack();
-  const { checkIn, isCheckinIn } = useCheckin();
+  const { checkin, isCheckingIn } = useCheckin();
+
   if (isLoading || isLoadingSettings) return <Spinner />;
 
   const {
@@ -58,8 +51,9 @@ function CheckinBooking() {
 
   function handleCheckin() {
     if (!confirmPaid) return;
-    if (addBreakFast) {
-      checkIn({
+
+    if (addBreakfast) {
+      checkin({
         bookingId,
         breakfast: {
           hasBreakfast: true,
@@ -68,7 +62,7 @@ function CheckinBooking() {
         },
       });
     } else {
-      checkIn({ bookingId, breakfast: {} });
+      checkin({ bookingId, breakfast: {} });
     }
   }
 
@@ -80,30 +74,32 @@ function CheckinBooking() {
       </Row>
 
       <BookingDataBox booking={booking} />
+
       {!hasBreakfast && (
         <Box>
           <Checkbox
-            checked={addBreakFast}
+            checked={addBreakfast}
             onChange={() => {
-              setAddBreakFast((add) => !add);
+              setAddBreakfast((add) => !add);
               setConfirmPaid(false);
             }}
             id="breakfast"
           >
-            Want to add breakfast {formatCurrency(optionalBreakfastPrice)}?
+            Want to add breakfast for {formatCurrency(optionalBreakfastPrice)}?
           </Checkbox>
         </Box>
       )}
+
       <Box>
         <Checkbox
           checked={confirmPaid}
           onChange={() => setConfirmPaid((confirm) => !confirm)}
-          id={"confirm"}
-          disabled={confirmPaid || isCheckinIn}
+          disabled={confirmPaid || isCheckingIn}
+          id="confirm"
         >
-          I confirm that {guests.fullName} has paid total amount of{" "}
-          {!addBreakFast
-            ? formatCurrency(optionalBreakfastPrice)
+          I confirm that {guests.fullName} has paid the total amount of{" "}
+          {!addBreakfast
+            ? formatCurrency(totalPrice)
             : `${formatCurrency(
                 totalPrice + optionalBreakfastPrice
               )} (${formatCurrency(totalPrice)} + ${formatCurrency(
@@ -111,33 +107,15 @@ function CheckinBooking() {
               )})`}
         </Checkbox>
       </Box>
-      <Modal>
-        <ButtonGroup>
-          <Button
-            onClick={handleCheckin}
-            disabled={!confirmPaid || isCheckinIn}
-          >
-            Check in booking #{bookingId}
-          </Button>
-          <Modal.Open opens={"deleteBooking"}>
-            <Button variation="danger">Delete Booking</Button>
-          </Modal.Open>
-          <Button variation="secondary" onClick={moveBack}>
-            Back
-          </Button>
-        </ButtonGroup>
-        <Modal.Window name={"deleteBooking"}>
-          <ConfirmDelete
-            resourceName={"bookings"}
-            disabled={isDeletingBooking}
-            onConfirm={() => {
-              deleteBooking(bookingId, {
-                onSettled: () => navigate(-1),
-              });
-            }}
-          />
-        </Modal.Window>
-      </Modal>
+
+      <ButtonGroup>
+        <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckingIn}>
+          Check in booking #{bookingId}
+        </Button>
+        <Button variation="secondary" onClick={moveBack}>
+          Back
+        </Button>
+      </ButtonGroup>
     </>
   );
 }

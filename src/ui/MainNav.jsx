@@ -7,7 +7,6 @@ import {
   HiOutlineHomeModern,
   HiOutlineUsers,
 } from "react-icons/hi2";
-// import Uploader from "../data/Uploader";
 
 const NavList = styled.ul`
   display: flex;
@@ -29,6 +28,7 @@ const StyledNavLink = styled(NavLink)`
     transition: all 0.3s;
   }
 
+  /* This works because react-router places the active class on the active NavLink */
   &:hover,
   &:active,
   &.active:link,
@@ -72,7 +72,7 @@ function MainNav() {
         <li>
           <StyledNavLink to="/cabins">
             <HiOutlineHomeModern />
-            <span>Cabin</span>
+            <span>Cabins</span>
           </StyledNavLink>
         </li>
         <li>
@@ -88,7 +88,6 @@ function MainNav() {
           </StyledNavLink>
         </li>
       </NavList>
-      {/* <Uploader /> */}
     </nav>
   );
 }

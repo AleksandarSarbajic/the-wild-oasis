@@ -17,14 +17,16 @@ function UpdateUserDataForm() {
       user_metadata: { fullName: currentFullName },
     },
   } = useUser();
-  const { updatedUser, isUpdating } = useUpdateUser();
+
+  const { updateUser, isUpdating } = useUpdateUser();
+
   const [fullName, setFullName] = useState(currentFullName);
   const [avatar, setAvatar] = useState(null);
 
   function handleSubmit(e) {
     e.preventDefault();
     if (!fullName) return;
-    updatedUser(
+    updateUser(
       { fullName, avatar },
       {
         onSuccess: () => {
@@ -45,6 +47,7 @@ function UpdateUserDataForm() {
       <FormRow label="Email address">
         <Input value={email} disabled />
       </FormRow>
+
       <FormRow label="Full name">
         <Input
           type="text"
@@ -54,20 +57,22 @@ function UpdateUserDataForm() {
           disabled={isUpdating}
         />
       </FormRow>
+
       <FormRow label="Avatar image">
         <FileInput
-          disabled={isUpdating}
           id="avatar"
           accept="image/*"
           onChange={(e) => setAvatar(e.target.files[0])}
+          disabled={isUpdating}
         />
       </FormRow>
+
       <FormRow>
         <Button
           type="reset"
+          variation="secondary"
           disabled={isUpdating}
           onClick={handleCancel}
-          variation="secondary"
         >
           Cancel
         </Button>

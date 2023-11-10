@@ -29,10 +29,15 @@ const TableHeader = styled.header`
 `;
 
 function CabinTable() {
-  const { isLoading, data: cabins } = useQuery({
+  const {
+    isLoading,
+    data: cabins,
+    error,
+  } = useQuery({
     queryKey: ["cabins"],
     queryFn: getCabins,
   });
+
   if (isLoading) return <Spinner />;
 
   return (
@@ -44,12 +49,9 @@ function CabinTable() {
         <div>Price</div>
         <div>Discount</div>
         <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </TableHeader>
       {cabins.map((cabin) => (
-        <CabinRow key={cabin.id} cabin={cabin} />
+        <CabinRow cabin={cabin} key={cabin.id} />
       ))}
     </Table>
   );
