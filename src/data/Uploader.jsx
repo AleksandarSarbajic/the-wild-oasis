@@ -63,6 +63,8 @@ async function createBookings() {
       : 0; // hardcoded breakfast price
     const totalPrice = cabinPrice + extrasPrice;
 
+    console.log(numNights);
+
     let status;
     if (
       isPast(new Date(booking.endDate)) &&
